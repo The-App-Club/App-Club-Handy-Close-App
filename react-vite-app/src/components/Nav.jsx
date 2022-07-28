@@ -26,7 +26,6 @@ const StyledNav = styled.nav`
 
 const Nav = ({open, setOpen, isTrigger, setIsTrigger}) => {
   const navContainerDomRef = useRef();
-  const isHandyClose = useRef(false);
 
   useClickOutside(navContainerDomRef, (e) => {
     // console.log(e);
@@ -57,7 +56,7 @@ const Nav = ({open, setOpen, isTrigger, setIsTrigger}) => {
         },
       });
     }
-  }, [open, isHandyClose]);
+  }, [open]);
 
   return (
     <StyledNav ref={navContainerDomRef}>
