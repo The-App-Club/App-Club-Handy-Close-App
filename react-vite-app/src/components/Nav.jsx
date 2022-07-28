@@ -39,7 +39,7 @@ const Nav = ({open, setOpen, isTrigger, setIsTrigger}) => {
       document.body.classList.remove('loading');
       gsap.to(navContainerDomRef.current, {
         x: `-100%`,
-        duration: 1.2,
+        duration: 0.6,
         ease: Power3.easeInOut,
         onComplete: function () {
           setIsTrigger(false);
@@ -49,7 +49,7 @@ const Nav = ({open, setOpen, isTrigger, setIsTrigger}) => {
       document.body.classList.add('loading');
       gsap.to(navContainerDomRef.current, {
         x: `0%`,
-        duration: 1.2,
+        duration: 0.6,
         ease: Power3.easeInOut,
         onComplete: function () {
           setIsTrigger(false);
